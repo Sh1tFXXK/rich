@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的网页</title>
+
+  <!-- ====================================================== -->
+  <!-- == 在这里添加您所有外部文件的引用 == -->
+  <!-- ====================================================== -->
+
+  <!-- 1. 引入您的 CSS 文件 -->
+  <!-- 
+    这些是您提供的原始 HTML 中的样式文件。
+    路径以 "/" 开头，指向 public 文件夹的根目录。
+  -->
+  <link href="/assets/static/uxbot/daisyui@5.css" rel="stylesheet" type="text/css">
+  <link href="/assets/static/uxbot/daisyui-themes.css" rel="stylesheet" type="text/css">
+
+  <!-- 2. 引入您的 JS 文件 -->
+  <!-- 
+    这些脚本现在会在 Vue 应用加载前执行。
+    这样可以确保当 Home.vue 组件挂载时，
+    像 Iconify, Holder.js 等库已经准备就绪。
+  -->
+  <script src="/assets/static/uxbot/tailwind-browser@4.js"></script>
+  <script src="/assets/3/3.1.1/iconify.min.js"></script>
+  <script src="/assets/static/uxbot/25_6/holder.js"></script>
+  
+</head>
+<body>
+  <!-- 您的 Vue 应用会挂载到这个 div 上 -->
+  <div id="app"></div>
+
+  <!-- 这是 Vite/Vue CLI 用来启动应用的脚本 -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
