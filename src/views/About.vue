@@ -14,7 +14,7 @@
           <div class="p-8 md:p-12 bg-base-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div class="avatar group relative">
               <div class="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img alt="作者头像" data-src="placehold.co/128x128.png?text=Author">
+                <img alt="作者头像" src="/assets/images/preview.jpg" class="w-full h-full object-cover rounded-full">
               </div>
               <div class="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 smooth-transition">
                 <p class="text-white text-sm text-center">
@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="flex-1 text-center md:text-left">
-              <h1 class="text-4xl font-bold">张伟</h1>
+              <h1 class="text-4xl font-bold">王子牙</h1>
               <p class="text-primary text-lg mt-2">
                 全栈开发者 &amp; 技术博主
               </p>
@@ -52,10 +52,7 @@
             </div>
             <ul class="space-y-2 text-base-content/80">
               <li>
-                <strong>北京大学</strong> - 计算机科学硕士 (2020-2023)
-              </li>
-              <li>
-                <strong>浙江大学</strong> - 软件工程学士 (2016-2020)
+                <strong>太原学院</strong> -  信息工程 本科(2022-2026)
               </li>
             </ul>
           </div>
@@ -91,14 +88,14 @@
               <div data-repeatable="true">
                 <p class="flex items-center gap-2 mb-1">
                   <span class="iconify" data-icon="logos:typescript-icon" data-width="18"></span>
-                  TypeScript
+                  html,js,TypeScript
                 </p>
                 <progress value="90" max="100" class="progress progress-primary w-full"></progress>
               </div>
               <div data-repeatable="true">
                 <p class="flex items-center gap-2 mb-1">
                   <span class="iconify" data-icon="logos:react" data-width="18"></span>
-                  React &amp; Next.js
+                  React &amp; Vue
                 </p>
                 <progress value="95" max="100" class="progress progress-primary w-full"></progress>
               </div>
@@ -196,7 +193,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
             <figure>
-              <img alt="Project Nova" class="smooth-transition group-hover:scale-105" data-src="placehold.co/400x225.png?text=Project+Nova">
+              <img alt="Project Nova" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -223,7 +220,7 @@
           </div>
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
             <figure>
-              <img alt="Data-Viz Engine" class="smooth-transition group-hover:scale-105" data-src="placehold.co/400x225.png?text=Data-Viz+Engine">
+              <img alt="Data-Viz Engine" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -250,7 +247,7 @@
           </div>
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
             <figure>
-              <img alt="Personal Blog" class="smooth-transition group-hover:scale-105" data-src="placehold.co/400x225.png?text=Personal+Blog">
+              <img alt="Personal Blog" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -288,7 +285,7 @@
               <span class="iconify text-primary" data-icon="heroicons:rocket-launch-solid" data-width="20"></span>
             </div>
             <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono italic">2016</time>
+              <time class="font-mono italic">2022</time>
               <div class="text-lg font-black">开启编程之旅</div>
               <p>
                 进入大学，第一次接触 C 语言，写下 "Hello,
@@ -365,7 +362,7 @@
             <div class="flex items-center gap-4 mt-4">
               <div class="avatar">
                 <div class="w-12 rounded-full">
-                  <img alt="推荐人头像" data-src="placehold.co/48x48.png?text=L.W.">
+                  <img alt="推荐人头像" src="/assets/images/preview.jpg">
                 </div>
               </div>
               <div>
@@ -381,7 +378,7 @@
             <div class="flex items-center gap-4 mt-4">
               <div class="avatar">
                 <div class="w-12 rounded-full">
-                  <img alt="推荐人头像" data-src="placehold.co/48x48.png?text=W.L.">
+                  <img alt="推荐人头像" src="/assets/images/preview.jpg">
                 </div>
               </div>
               <div>

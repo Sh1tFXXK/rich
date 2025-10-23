@@ -1,10 +1,19 @@
 <template>
   <main class="flex-1 w-full">
       <section id="ArticleBannerSection" class="relative h-80 bg-base-300 flex items-center justify-center text-center overflow-hidden">
-          <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://placehold.co/1920x1080.png?text=Abstract+Tech+Background')"></div>
-          <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4" type="video/mp4">
+          <!-- Fallback image if video fails to load -->
+           <img src="/assets/images/hero-bg.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+        </video>
+      
           <div class="relative z-20 px-4 text-white">
-              <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-down">探索技术世界</h1>
               <p class="text-lg md:text-xl text-base-content/80 max-w-2xl mx-auto animate-fade-in-up">所有文章，一览无余</p>
           </div>
       </section>
@@ -68,7 +77,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                   <!-- Repeatable Article Card -->
                   <div data-repeatable="true" class="card bg-base-200 shadow-lg smooth-transition hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer" onclick="navigateTo('article_detail_page')">
-                      <figure><img alt="AI and Future Tech" class="aspect-video object-cover" data-src="placehold.co/600x338.png?text=AI+and+Future+Tech"></figure>
+                      <figure><img alt="AI and Future Tech" class="aspect-video object-cover" src="/assets/images/hero-bg.jpg"></figure>
                       <div class="card-body p-6">
                           <h4 class="card-title text-base-content">探索人工智能的未来趋势</h4>
                           <p class="text-base-content/70 text-sm line-clamp-2 mt-2">本文深入探讨了当前人工智能领域的前沿技术，并对未来的发展方向进行了预测分析。</p>
