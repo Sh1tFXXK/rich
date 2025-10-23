@@ -1,163 +1,197 @@
 <template>
   <main class="flex-1 w-full">
-      <section id="ArticleBannerSection" class="relative h-80 bg-base-300 flex items-center justify-center text-center overflow-hidden">
-        <video 
-          autoplay 
-          muted 
-          loop 
-          playsinline 
-          class="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4" type="video/mp4">
-          <!-- Fallback image if video fails to load -->
-           <img src="/assets/images/hero-bg.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
-        </video>
-      
-          <div class="relative z-20 px-4 text-white">
-              <p class="text-lg md:text-xl text-base-content/80 max-w-2xl mx-auto animate-fade-in-up">所有文章，一览无余</p>
+    <section
+      id="ArticleBannerSection"
+      class="relative h-80 bg-base-300 flex items-center justify-center text-center overflow-hidden"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        crossorigin="anonymous"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4" type="video/mp4" />
+        <!-- Fallback image if video fails to load -->
+        <img
+          src="/assets/images/hero-bg.jpg"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+      </video>
+
+      <div class="relative z-20 px-4 text-white">
+        <p class="text-lg md:text-xl text-base-content/80 max-w-2xl mx-auto animate-fade-in-up">
+          所有文章，一览无余
+        </p>
+      </div>
+    </section>
+
+    <div class="container mx-auto px-4 lg:px-8 py-12">
+      <section
+        id="ArticleFilterAndSortSection"
+        class="bg-base-200 p-4 rounded-box mb-8 sticky top-[80px] z-40 shadow-lg"
+      >
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="dropdown">
+              <button tabindex="0" role="button" class="btn btn-ghost">
+                <span class="iconify" data-icon="heroicons:tag" data-width="20"></span>
+                <span>所有分类</span>
+                <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
+              </button>
+              <ul
+                tabindex="0"
+                class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52"
+              >
+                <li><a>所有分类</a></li>
+                <li><a>前端开发</a></li>
+                <li><a>后端架构</a></li>
+                <li><a>人工智能</a></li>
+                <li><a>产品设计</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button tabindex="0" role="button" class="btn btn-ghost">
+                <span class="iconify" data-icon="heroicons:hashtag" data-width="20"></span>
+                <span>所有标签</span>
+                <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
+              </button>
+              <ul
+                tabindex="0"
+                class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52"
+              >
+                <li><a>所有标签</a></li>
+                <li><a>JavaScript</a></li>
+                <li><a>React</a></li>
+                <li><a>Node.js</a></li>
+                <li><a>Python</a></li>
+              </ul>
+            </div>
+
+            <div class="hidden md:flex items-center gap-2 text-sm text-base-content/70">
+              <span class="font-semibold">当前筛选:</span>
+              <div class="badge badge-primary badge-outline">分类：前端开发</div>
+              <div class="badge badge-secondary badge-outline">标签：JavaScript</div>
+            </div>
           </div>
+
+          <div class="dropdown">
+            <button tabindex="0" role="button" class="btn btn-ghost">
+              <span class="iconify" data-icon="heroicons:arrows-up-down" data-width="20"></span>
+              <span>按最新发布</span>
+              <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
+            </button>
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52"
+            >
+              <li><a>按最新发布</a></li>
+              <li><a>按阅读最多</a></li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <div class="container mx-auto px-4 lg:px-8 py-12">
-          <section id="ArticleFilterAndSortSection" class="bg-base-200 p-4 rounded-box mb-8 sticky top-[80px] z-40 shadow-lg">
-              <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                  <div class="flex flex-wrap items-center gap-4">
-                      <div class="dropdown">
-                          <button tabindex="0" role="button" class="btn btn-ghost">
-                              <span class="iconify" data-icon="heroicons:tag" data-width="20"></span>
-                              <span>所有分类</span>
-                              <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
-                          </button>
-                          <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52">
-                              <li><a>所有分类</a></li>
-                              <li><a>前端开发</a></li>
-                              <li><a>后端架构</a></li>
-                              <li><a>人工智能</a></li>
-                              <li><a>产品设计</a></li>
-                          </ul>
-                      </div>
-
-                      <div class="dropdown">
-                          <button tabindex="0" role="button" class="btn btn-ghost">
-                              <span class="iconify" data-icon="heroicons:hashtag" data-width="20"></span>
-                              <span>所有标签</span>
-                              <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
-                          </button>
-                          <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52">
-                              <li><a>所有标签</a></li>
-                              <li><a>JavaScript</a></li>
-                              <li><a>React</a></li>
-                              <li><a>Node.js</a></li>
-                              <li><a>Python</a></li>
-                          </ul>
-                      </div>
-
-                      <div class="hidden md:flex items-center gap-2 text-sm text-base-content/70">
-                          <span class="font-semibold">当前筛选:</span>
-                          <div class="badge badge-primary badge-outline">分类：前端开发</div>
-                          <div class="badge badge-secondary badge-outline">标签：JavaScript</div>
-                      </div>
-                  </div>
-
-                  <div class="dropdown">
-                      <button tabindex="0" role="button" class="btn btn-ghost">
-                          <span class="iconify" data-icon="heroicons:arrows-up-down" data-width="20"></span>
-                          <span>按最新发布</span>
-                          <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
-                      </button>
-                      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52">
-                          <li><a>按最新发布</a></li>
-                          <li><a>按阅读最多</a></li>
-                      </ul>
-                  </div>
+      <section id="ArticleListSection">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <!-- Repeatable Article Card -->
+          <div
+            data-repeatable="true"
+            class="card bg-base-200 shadow-lg smooth-transition hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer"
+            onclick="navigateTo('article_detail_page')"
+          >
+            <figure>
+              <img
+                alt="AI and Future Tech"
+                class="aspect-video object-cover"
+                src="/assets/images/hero-bg.jpg"
+              />
+            </figure>
+            <div class="card-body p-6">
+              <h4 class="card-title text-base-content">探索人工智能的未来趋势</h4>
+              <p class="text-base-content/70 text-sm line-clamp-2 mt-2">
+                本文深入探讨了当前人工智能领域的前沿技术，并对未来的发展方向进行了预测分析。
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <div class="badge badge-outline badge-primary badge-sm">人工智能</div>
+                <div class="badge badge-outline badge-secondary badge-sm">科技</div>
               </div>
-          </section>
-
-          <section id="ArticleListSection">
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                  <!-- Repeatable Article Card -->
-                  <div data-repeatable="true" class="card bg-base-200 shadow-lg smooth-transition hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer" onclick="navigateTo('article_detail_page')">
-                      <figure><img alt="AI and Future Tech" class="aspect-video object-cover" src="/assets/images/hero-bg.jpg"></figure>
-                      <div class="card-body p-6">
-                          <h4 class="card-title text-base-content">探索人工智能的未来趋势</h4>
-                          <p class="text-base-content/70 text-sm line-clamp-2 mt-2">本文深入探讨了当前人工智能领域的前沿技术，并对未来的发展方向进行了预测分析。</p>
-                          <div class="flex flex-wrap gap-2 mt-4">
-                              <div class="badge badge-outline badge-primary badge-sm">人工智能</div>
-                              <div class="badge badge-outline badge-secondary badge-sm">科技</div>
-                          </div>
-                          <div class="divider my-4"></div>
-                          <div class="flex justify-between items-center text-xs text-base-content/60">
-                              <div class="flex items-center gap-1">
-                                  <span class="iconify" data-icon="heroicons:calendar-days" data-width="14"></span>
-                                  <span>2025年10月08日</span>
-                              </div>
-                              <div class="flex items-center gap-1">
-                                  <span class="iconify" data-icon="heroicons:eye" data-width="14"></span>
-                                  <span>1.2k 阅读</span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- ... 其他 5 个文章卡片 ... -->
+              <div class="divider my-4"></div>
+              <div class="flex justify-between items-center text-xs text-base-content/60">
+                <div class="flex items-center gap-1">
+                  <span class="iconify" data-icon="heroicons:calendar-days" data-width="14"></span>
+                  <span>2025年10月08日</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="iconify" data-icon="heroicons:eye" data-width="14"></span>
+                  <span>1.2k 阅读</span>
+                </div>
               </div>
-          </section>
+            </div>
+          </div>
+          <!-- ... 其他 5 个文章卡片 ... -->
+        </div>
+      </section>
 
-          <section id="PaginationSection" class="flex justify-center mt-12">
-              <div class="join">
-                  <button class="join-item btn">
-                      <span class="iconify" data-icon="heroicons:chevron-left" data-width="16"></span>
-                      <span>上一页</span>
-                  </button>
-                  <button class="join-item btn">1</button>
-                  <button class="join-item btn btn-primary">2</button>
-                  <button class="join-item btn">3</button>
-                  <button class="join-item btn btn-disabled">...</button>
-                  <button class="join-item btn">10</button>
-                  <button class="join-item btn">
-                      <span>下一页</span>
-                      <span class="iconify" data-icon="heroicons:chevron-right" data-width="16"></span>
-                  </button>
-              </div>
-          </section>
-      </div>
+      <section id="PaginationSection" class="flex justify-center mt-12">
+        <div class="join">
+          <button class="join-item btn">
+            <span class="iconify" data-icon="heroicons:chevron-left" data-width="16"></span>
+            <span>上一页</span>
+          </button>
+          <button class="join-item btn">1</button>
+          <button class="join-item btn btn-primary">2</button>
+          <button class="join-item btn">3</button>
+          <button class="join-item btn btn-disabled">...</button>
+          <button class="join-item btn">10</button>
+          <button class="join-item btn">
+            <span>下一页</span>
+            <span class="iconify" data-icon="heroicons:chevron-right" data-width="16"></span>
+          </button>
+        </div>
+      </section>
+    </div>
   </main>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
 onMounted(() => {
   if (window.setActiveNavigation) {
-    window.setActiveNavigation('article_list_page');
+    window.setActiveNavigation('article_list_page')
   }
   if (window.BlogUtils && typeof window.BlogUtils.initLazyLoading === 'function') {
-    window.BlogUtils.initLazyLoading();
+    window.BlogUtils.initLazyLoading()
   }
-  
-  const filterBar = document.getElementById('ArticleFilterAndSortSection');
+
+  const filterBar = document.getElementById('ArticleFilterAndSortSection')
   if (filterBar) {
-      const observer = new IntersectionObserver(
-          ([e]) => e.target.classList.toggle('shadow-2xl', e.intersectionRatio < 1),
-          { threshold: [1] }
-      );
-      observer.observe(filterBar);
+    const observer = new IntersectionObserver(
+      ([e]) => e.target.classList.toggle('shadow-2xl', e.intersectionRatio < 1),
+      { threshold: [1] },
+    )
+    observer.observe(filterBar)
   }
 
   if (window.Holder) {
-    window.Holder.run({ domain: "placehold.co" });
+    window.Holder.run({ domain: 'placehold.co' })
   }
-});
+})
 </script>
 
 <style scoped>
 .animate-fade-in-down {
-    animation: fade-in-down 0.6s ease-out forwards;
+  animation: fade-in-down 0.6s ease-out forwards;
 }
 .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out 0.3s forwards;
-    opacity: 0;
+  animation: fade-in-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
 }
 #ArticleFilterAndSortSection {
-    transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 </style>
