@@ -28,9 +28,9 @@
       <div class="hero-content text-center text-base-content relative z-20">
         <div class="max-w-4xl">
           <h1
-            class="mb-8 text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent tech-glow-text"
+            class="mb-8 text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent tech-glow-text italic"
           >
-            探索未来，赋能技术
+            WangChuang
           </h1>
           <p class="mb-8 text-xl text-base-content/80 max-w-2xl mx-auto">
             最新技术洞察、编程实践与深度解析
