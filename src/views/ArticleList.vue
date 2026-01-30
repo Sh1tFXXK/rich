@@ -13,7 +13,6 @@
         class="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4" type="video/mp4" />
-        <!-- Fallback image if video fails to load -->
         <img
           src="/assets/images/hero-bg.jpg"
           alt="Background"
@@ -22,8 +21,9 @@
       </video>
 
       <div class="relative z-20 px-4 text-white">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">博客文章</h1>
         <p class="text-lg md:text-xl text-base-content/80 max-w-2xl mx-auto animate-fade-in-up">
-          所有文章，一览无余
+          记录技术成长，分享开发经验
         </p>
       </div>
     </section>
@@ -34,48 +34,8 @@
         class="bg-base-200 p-4 rounded-box mb-8 sticky top-[80px] z-40 shadow-lg"
       >
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div class="flex flex-wrap items-center gap-4">
-            <div class="dropdown">
-              <button tabindex="0" role="button" class="btn btn-ghost">
-                <span class="iconify" data-icon="heroicons:tag" data-width="20"></span>
-                <span>所有分类</span>
-                <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
-              </button>
-              <ul
-                tabindex="0"
-                class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52"
-              >
-                <li><a>所有分类</a></li>
-                <li><a>前端开发</a></li>
-                <li><a>后端架构</a></li>
-                <li><a>人工智能</a></li>
-                <li><a>产品设计</a></li>
-              </ul>
-            </div>
-
-            <div class="dropdown">
-              <button tabindex="0" role="button" class="btn btn-ghost">
-                <span class="iconify" data-icon="heroicons:hashtag" data-width="20"></span>
-                <span>所有标签</span>
-                <span class="iconify" data-icon="heroicons:chevron-down" data-width="16"></span>
-              </button>
-              <ul
-                tabindex="0"
-                class="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52"
-              >
-                <li><a>所有标签</a></li>
-                <li><a>JavaScript</a></li>
-                <li><a>React</a></li>
-                <li><a>Node.js</a></li>
-                <li><a>Python</a></li>
-              </ul>
-            </div>
-
-            <div class="hidden md:flex items-center gap-2 text-sm text-base-content/70">
-              <span class="font-semibold">当前筛选:</span>
-              <div class="badge badge-primary badge-outline">分类：前端开发</div>
-              <div class="badge badge-secondary badge-outline">标签：JavaScript</div>
-            </div>
+          <div class="text-sm text-base-content/70">
+            共 <span class="font-semibold text-primary">24</span> 篇文章
           </div>
 
           <div class="dropdown">
@@ -99,13 +59,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           <!-- Repeatable Article Card -->
           <div
+            v-for="i in 6"
+            :key="i"
             data-repeatable="true"
             class="card bg-base-200 shadow-lg smooth-transition hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer"
-            onclick="navigateTo('article_detail_page')"
           >
             <figure>
               <img
-                alt="AI and Future Tech"
+                alt="文章封面"
                 class="aspect-video object-cover"
                 src="/assets/images/hero-bg.jpg"
               />
@@ -123,16 +84,15 @@
               <div class="flex justify-between items-center text-xs text-base-content/60">
                 <div class="flex items-center gap-1">
                   <span class="iconify" data-icon="heroicons:calendar-days" data-width="14"></span>
-                  <span>2025年10月08日</span>
+                  <span>2025年1月{{ 10 + i }}日</span>
                 </div>
                 <div class="flex items-center gap-1">
                   <span class="iconify" data-icon="heroicons:eye" data-width="14"></span>
-                  <span>1.2k 阅读</span>
+                  <span>{{ 1.2 + i * 0.3 }}k 阅读</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ... 其他 5 个文章卡片 ... -->
         </div>
       </section>
 
@@ -161,13 +121,6 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  if (window.setActiveNavigation) {
-    window.setActiveNavigation('article_list_page')
-  }
-  if (window.BlogUtils && typeof window.BlogUtils.initLazyLoading === 'function') {
-    window.BlogUtils.initLazyLoading()
-  }
-
   const filterBar = document.getElementById('ArticleFilterAndSortSection')
   if (filterBar) {
     const observer = new IntersectionObserver(
@@ -175,10 +128,6 @@ onMounted(() => {
       { threshold: [1] },
     )
     observer.observe(filterBar)
-  }
-
-  if (window.Holder) {
-    window.Holder.run({ domain: 'placehold.co' })
   }
 })
 </script>

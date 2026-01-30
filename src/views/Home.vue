@@ -24,11 +24,50 @@
           class="absolute inset-0 w-full h-full object-cover"
         />
       </video>
+      <!-- SVG Decorative Wave -->
+      <svg class="absolute bottom-0 left-0 w-full h-32 opacity-20 z-10" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="url(#homeWaveGradient1)"/>
+        <path d="M0,80 C240,40 480,100 720,60 C960,20 1200,80 1440,40 L1440,120 L0,120 Z" fill="url(#homeWaveGradient2)" opacity="0.6"/>
+        <defs>
+          <linearGradient id="homeWaveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+            <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.6" />
+            <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.8" />
+          </linearGradient>
+          <linearGradient id="homeWaveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <!-- SVG Geometric Decorations -->
+      <svg class="absolute top-20 left-10 w-24 h-24 opacity-15 z-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="url(#homeCircleGrad)" stroke-width="2" fill="none"/>
+        <circle cx="50" cy="50" r="35" stroke="url(#homeCircleGrad)" stroke-width="1.5" fill="none" opacity="0.6"/>
+        <circle cx="50" cy="50" r="25" fill="url(#homeCircleGrad)" opacity="0.2"/>
+        <defs>
+          <linearGradient id="homeCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#06b6d4" />
+            <stop offset="100%" style="stop-color:#a855f7" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg class="absolute top-32 right-16 w-20 h-20 opacity-15 z-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 95,50 50,95 5,50" stroke="url(#homeDiamondGrad)" stroke-width="2" fill="none"/>
+        <polygon points="50,20 80,50 50,80 20,50" stroke="url(#homeDiamondGrad)" stroke-width="1.5" fill="none" opacity="0.6"/>
+        <defs>
+          <linearGradient id="homeDiamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6" />
+            <stop offset="100%" style="stop-color:#06b6d4" />
+          </linearGradient>
+        </defs>
+      </svg>
       <!-- Overlay -->
       <div class="hero-content text-center text-base-content relative z-20">
         <div class="max-w-4xl">
           <h1
-            class="mb-8 text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent tech-glow-text italic"
+            class="mb-8 text-8xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent italic tracking-wider drop-shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:drop-shadow-[0_0_50px_rgba(168,85,247,0.9)] transition-all duration-500 hover:scale-110 cursor-default"
+            style="font-family: 'Times New Roman', Georgia, serif; text-shadow: 0 0 40px rgba(99,102,241,0.6), 0 0 80px rgba(168,85,247,0.4);"
           >
             WangChuang
           </h1>
@@ -375,8 +414,81 @@
       </div>
     </section>
 
+    <!-- Portfolio Preview Section -->
+    <section id="portfolio-preview" class="py-16 bg-base-200">
+      <div class="container mx-auto px-8">
+        <div class="flex items-center justify-between mb-8">
+          <div class="flex items-center gap-4">
+            <h2 class="text-3xl font-bold text-base-content">精选作品</h2>
+            <div class="h-px bg-gradient-to-r from-primary to-transparent flex-1 w-32"></div>
+          </div>
+          <router-link to="/portfolio" class="btn btn-outline btn-primary">
+            查看全部
+            <span class="iconify ml-2" data-icon="heroicons:arrow-right" data-width="20"></span>
+          </router-link>
+        </div>
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Portfolio Item 1 -->
+          <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
+            <div class="relative h-48 overflow-hidden">
+              <img src="/assets/images/carousel-1.jpg" alt="电商平台" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
+              <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold flex items-center gap-2">
+                  <span class="iconify" data-icon="heroicons:eye" data-width="24"></span>
+                  查看详情
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="badge badge-primary badge-sm mb-2">前端开发</span>
+              <h3 class="text-xl font-bold text-base-content mb-2 group-hover:text-primary transition-colors">电商平台前端重构</h3>
+              <p class="text-base-content/70 text-sm line-clamp-2">使用 Vue 3 + TypeScript 重构大型电商平台前端，提升性能 40%</p>
+            </div>
+          </article>
+          <!-- Portfolio Item 2 -->
+          <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
+            <div class="relative h-48 overflow-hidden">
+              <img src="/assets/images/carousel-2.jpg" alt="API网关" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
+              <div class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold flex items-center gap-2">
+                  <span class="iconify" data-icon="heroicons:eye" data-width="24"></span>
+                  查看详情
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="badge badge-secondary badge-sm mb-2">后端架构</span>
+              <h3 class="text-xl font-bold text-base-content mb-2 group-hover:text-secondary transition-colors">微服务API网关</h3>
+              <p class="text-base-content/70 text-sm line-clamp-2">基于 Node.js 的高性能 API 网关，支持百万级并发</p>
+            </div>
+          </article>
+          <!-- Portfolio Item 3 -->
+          <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
+            <div class="relative h-48 overflow-hidden">
+              <img src="/assets/images/carousel-3.jpg" alt="移动应用" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
+              <div class="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-semibold flex items-center gap-2">
+                  <span class="iconify" data-icon="heroicons:eye" data-width="24"></span>
+                  查看详情
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="badge badge-accent badge-sm mb-2">移动应用</span>
+              <h3 class="text-xl font-bold text-base-content mb-2 group-hover:text-accent transition-colors">跨平台移动应用</h3>
+              <p class="text-base-content/70 text-sm line-clamp-2">使用 React Native 开发的社交应用，iOS 和 Android 双端</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Featured Articles -->
-    <section id="featured-articles" class="py-16 bg-base-200">
+    <section id="featured-articles" class="py-16 bg-base-100">
       <div class="container mx-auto px-8">
         <div class="flex items-center gap-4 mb-8">
           <h2 class="text-3xl font-bold text-base-content">热门文章</h2>

@@ -10,6 +10,34 @@
       <section id="AboutMeHeroSection" class="relative overflow-hidden rounded-box">
         <div class="absolute inset-0 bg-base-200/50 opacity-20 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"></div>
         <div class="absolute inset-0 bg-base-200/50 opacity-20 [mask-image:radial-gradient(100%_100%_at_bottom_left,white,transparent)]"></div>
+        <!-- SVG Wave Background -->
+        <svg class="absolute bottom-0 left-0 w-full h-24 md:h-32 opacity-30" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="url(#waveGradient1)"/>
+          <path d="M0,80 C240,40 480,100 720,60 C960,20 1200,80 1440,40 L1440,120 L0,120 Z" fill="url(#waveGradient2)" opacity="0.5"/>
+          <defs>
+            <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:var(--color-primary);stop-opacity:0.8" />
+              <stop offset="50%" style="stop-color:var(--color-secondary);stop-opacity:0.6" />
+              <stop offset="100%" style="stop-color:var(--color-accent);stop-opacity:0.8" />
+            </linearGradient>
+            <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:var(--color-accent);stop-opacity:0.6" />
+              <stop offset="100%" style="stop-color:var(--color-primary);stop-opacity:0.4" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <!-- SVG Decorative Circles -->
+        <svg class="absolute top-4 right-4 w-32 h-32 opacity-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="40" stroke="url(#circleGradient)" stroke-width="2" fill="none"/>
+          <circle cx="50" cy="50" r="30" stroke="url(#circleGradient)" stroke-width="1.5" fill="none" opacity="0.6"/>
+          <circle cx="50" cy="50" r="20" stroke="url(#circleGradient)" stroke-width="1" fill="none" opacity="0.4"/>
+          <defs>
+            <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:var(--color-primary)" />
+              <stop offset="100%" style="stop-color:var(--color-secondary)" />
+            </linearGradient>
+          </defs>
+        </svg>
         <div class="tech-border-gradient">
           <div class="p-8 md:p-12 bg-base-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div class="avatar group relative">
@@ -23,17 +51,22 @@
               </div>
             </div>
             <div class="flex-1 text-center md:text-left">
-              <h1 class="text-4xl font-bold">王子牙</h1>
+              <h1 class="text-4xl font-bold">WangChuang</h1>
               <p class="text-primary text-lg mt-2">
-                全栈开发者 &amp; 技术博主
+                全栈开发者 &amp; 技术创作者
               </p>
               <p class="mt-4 max-w-xl text-base-content/80">
-                热衷于用代码构建优雅、高效的解决方案。我相信技术是推动世界进步的核心动力，并致力于分享知识，与社区共同成长。
+                5年+ 全栈开发经验，专注于现代 Web 技术栈。热衷于用代码构建优雅、高效的解决方案，相信技术是推动世界进步的核心动力。致力于分享知识，与社区共同成长。
               </p>
               <div class="mt-8 flex justify-center md:justify-start gap-4">
-                <button class="btn btn-primary">关注我</button><button class="btn btn-outline btn-secondary" onclick="navigateTo('contact_me_page')">
+                <router-link to="/portfolio" class="btn btn-primary">
+                  <span class="iconify mr-2" data-icon="heroicons:briefcase" data-width="20"></span>
+                  查看作品
+                </router-link>
+                <a href="mailto:contact@example.com" class="btn btn-outline btn-secondary">
+                  <span class="iconify mr-2" data-icon="heroicons:envelope" data-width="20"></span>
                   联系我
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -185,89 +218,117 @@
           </div>
         </div>
       </section>
+      <!-- Stats Section -->
+      <section id="StatsSection" class="py-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-base-200/50 p-6 rounded-xl text-center hover:bg-base-200 transition-colors">
+            <div class="text-4xl font-black text-primary mb-2">5+</div>
+            <div class="text-base-content/70">年开发经验</div>
+          </div>
+          <div class="bg-base-200/50 p-6 rounded-xl text-center hover:bg-base-200 transition-colors">
+            <div class="text-4xl font-black text-secondary mb-2">50+</div>
+            <div class="text-base-content/70">完成项目</div>
+          </div>
+          <div class="bg-base-200/50 p-6 rounded-xl text-center hover:bg-base-200 transition-colors">
+            <div class="text-4xl font-black text-accent mb-2">30+</div>
+            <div class="text-base-content/70">技术文章</div>
+          </div>
+          <div class="bg-base-200/50 p-6 rounded-xl text-center hover:bg-base-200 transition-colors">
+            <div class="text-4xl font-black text-info mb-2">100%</div>
+            <div class="text-base-content/70">客户满意度</div>
+          </div>
+        </div>
+      </section>
+
       <!-- Projects Section -->
       <section id="ProjectsSection">
-        <h2 class="text-3xl font-bold mb-8 text-center md:text-left">
-          项目经验
-        </h2>
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-3xl font-bold text-center md:text-left">
+            精选项目
+          </h2>
+          <router-link to="/portfolio" class="btn btn-outline btn-primary">
+            查看全部作品
+            <span class="iconify ml-2" data-icon="heroicons:arrow-right" data-width="20"></span>
+          </router-link>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
+          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
             <figure>
-              <img alt="Project Nova" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
+              <img alt="电商平台重构" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
             </figure>
             <div class="card-body justify-between">
               <div>
-                <h3 class="card-title text-2xl">Project Nova</h3>
-                <p>一个面向开发者的实时协作代码编辑器。</p>
+                <h3 class="card-title text-2xl">电商平台重构</h3>
+                <p>Vue 3 + TypeScript 重构，性能提升 40%</p>
               </div>
               <div>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <div class="badge badge-primary badge-outline">
-                    React
+                    Vue 3
                   </div>
                   <div class="badge badge-secondary badge-outline">
-                    WebSockets
-                  </div>
-                  <div class="badge badge-accent badge-outline">
-                    CRDTs
-                  </div>
-                </div>
-                <div class="card-actions justify-end">
-                  <a href="#" aria-label="GitHub" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="mdi:github" data-width="24"></span></a><a href="#" aria-label="Live Demo" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="heroicons:globe-alt-solid" data-width="24"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
-            <figure>
-              <img alt="Data-Viz Engine" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
-            </figure>
-            <div class="card-body justify-between">
-              <div>
-                <h3 class="card-title text-2xl">Data-Viz Engine</h3>
-                <p>一个高性能、可定制的数据可视化引擎。</p>
-              </div>
-              <div>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <div class="badge badge-primary badge-outline">
                     TypeScript
                   </div>
-                  <div class="badge badge-secondary badge-outline">
-                    D3.js
-                  </div>
                   <div class="badge badge-accent badge-outline">
-                    Canvas API
+                    Pinia
                   </div>
                 </div>
                 <div class="card-actions justify-end">
-                  <a href="#" aria-label="GitHub" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="mdi:github" data-width="24"></span></a><a href="#" aria-label="Live Demo" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="heroicons:globe-alt-solid" data-width="24"></span></a>
+                  <router-link to="/portfolio" class="text-sm text-base-content/60 hover:text-primary">查看详情 →</router-link>
                 </div>
               </div>
             </div>
           </div>
-          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group">
+          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
             <figure>
-              <img alt="Personal Blog" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
+              <img alt="微服务网关" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-2.jpg">
             </figure>
             <div class="card-body justify-between">
               <div>
-                <h3 class="card-title text-2xl">个人博客系统</h3>
-                <p>基于 Jamstack 架构的现代化博客平台。</p>
+                <h3 class="card-title text-2xl">微服务API网关</h3>
+                <p>支持百万级并发的高性能网关</p>
               </div>
               <div>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <div class="badge badge-primary badge-outline">
-                    Next.js
+                    Node.js
                   </div>
                   <div class="badge badge-secondary badge-outline">
-                    MDX
+                    Redis
                   </div>
                   <div class="badge badge-accent badge-outline">
-                    Vercel
+                    Docker
                   </div>
                 </div>
                 <div class="card-actions justify-end">
-                  <a href="#" aria-label="GitHub" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="mdi:github" data-width="24"></span></a><a href="#" aria-label="Live Demo" class="btn btn-ghost btn-circle"><span class="iconify" data-icon="heroicons:globe-alt-solid" data-width="24"></span></a>
+                  <router-link to="/portfolio" class="text-sm text-base-content/60 hover:text-primary">查看详情 →</router-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
+            <figure>
+              <img alt="移动社交应用" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-3.jpg">
+            </figure>
+            <div class="card-body justify-between">
+              <div>
+                <h3 class="card-title text-2xl">移动社交应用</h3>
+                <p>React Native 跨平台开发</p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <div class="badge badge-primary badge-outline">
+                    React Native
+                  </div>
+                  <div class="badge badge-secondary badge-outline">
+                    Firebase
+                  </div>
+                  <div class="badge badge-accent badge-outline">
+                    Redux
+                  </div>
+                </div>
+                <div class="card-actions justify-end">
+                  <router-link to="/portfolio" class="text-sm text-base-content/60 hover:text-primary">查看详情 →</router-link>
                 </div>
               </div>
             </div>
@@ -394,7 +455,10 @@
         <h2 class="text-3xl font-bold mb-8">保持联系</h2>
         <div class="flex justify-center items-center gap-6">
           <div data-tip="GitHub" class="tooltip">
-            <a href="#" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="mdi:github" data-width="32"></span></a>
+            <a href="https://github.com/Sh1tFXXK" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="mdi:github" data-width="32"></span></a>
+          </div>
+          <div data-tip="Twitter/X" class="tooltip">
+            <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="mdi:twitter" data-width="32"></span></a>
           </div>
           <div data-tip="LinkedIn" class="tooltip">
             <a href="#" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="mdi:linkedin" data-width="32"></span></a>
@@ -403,7 +467,7 @@
             <a href="#" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="mdi:sina-weibo" data-width="32"></span></a>
           </div>
           <div data-tip="Email" class="tooltip">
-            <a href="#" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="heroicons:envelope-solid" data-width="32"></span></a>
+            <a href="mailto:contact@example.com" class="btn btn-ghost btn-lg btn-circle text-base-content/70 hover:text-primary smooth-transition"><span class="iconify" data-icon="heroicons:envelope-solid" data-width="32"></span></a>
           </div>
         </div>
       </section>

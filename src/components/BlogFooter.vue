@@ -10,15 +10,18 @@
                 <span class="iconify text-primary" data-icon="heroicons:code-bracket" data-width="32"></span>
               </div>
             </div>
-            <span class="text-xl font-bold text-primary">TechBlog</span>
+            <span class="text-xl font-bold text-primary">WangChuang</span>
           </div>
           <p class="text-sm text-base-content/70 max-w-xs">
-            分享前端技术、编程心得和科技趋势，<br>
-            用代码创造美好世界。
+            分享技术、记录成长<br>
+            用代码创造价值
           </p>
           <div class="flex gap-4 mt-4">
             <a href="https://github.com/Sh1tFXXK" target="_blank" rel="noopener noreferrer" class="text-base-content hover:text-primary smooth-transition cursor-pointer" title="GitHub">
               <span class="iconify" data-icon="mdi:github" data-width="24"></span>
+            </a>
+            <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer" class="text-base-content hover:text-primary smooth-transition cursor-pointer" title="Twitter/X">
+              <span class="iconify" data-icon="mdi:twitter" data-width="24"></span>
             </a>
             <a class="text-base-content hover:text-primary smooth-transition cursor-pointer" title="微博">
               <span class="iconify" data-icon="mdi:sina-weibo" data-width="24"></span>
@@ -35,29 +38,26 @@
         <!-- Quick Links -->
         <nav>
           <header class="footer-title text-base-content font-semibold">快速导航</header>
-          <a onclick="navigateTo('home_page')" class="link link-hover cursor-pointer">首页</a>
-          <router-link to="/article" class="link link-hover cursor-pointer">最新文章</router-link>
-          <a onclick="navigateTo('category_list_page')" class="link link-hover cursor-pointer">文章分类</a>
-          <a onclick="navigateTo('tag_list_page')" class="link link-hover cursor-pointer">标签云</a>
-          <a onclick="navigateTo('search_results_page')" class="link link-hover cursor-pointer">站内搜索</a>
-        </nav>
-    
-        <!-- Categories -->
-        <nav>
-          <header class="footer-title text-base-content font-semibold">热门分类</header>
-          <a onclick="BlogUtils.filterByCategory('前端开发')" class="link link-hover cursor-pointer">前端开发</a>
-          <a onclick="BlogUtils.filterByCategory('JavaScript')" class="link link-hover cursor-pointer">JavaScript</a>
-          <a onclick="BlogUtils.filterByCategory('Vue.js')" class="link link-hover cursor-pointer">Vue.js</a>
-          <a onclick="BlogUtils.filterByCategory('Node.js')" class="link link-hover cursor-pointer">Node.js</a>
-          <a onclick="BlogUtils.filt  erByCategory('技术分享')" class="link link-hover cursor-pointer">技术分享</a>
-        </nav>
-    
-        <!-- Contact &amp; About -->
-        <nav>
-          <header class="footer-title text-base-content font-semibold">关于博客</header>
+          <router-link to="/" class="link link-hover cursor-pointer">首页</router-link>
+          <router-link to="/portfolio" class="link link-hover cursor-pointer">作品集</router-link>
+          <router-link to="/blog" class="link link-hover cursor-pointer">博客</router-link>
           <router-link to="/about" class="link link-hover cursor-pointer">关于我</router-link>
-          <a onclick="navigateTo('contact_me_page')" class="link link-hover cursor-pointer">联系我</a>
-          <a onclick="navigateTo('admin_dashboard_page')" class="link link-hover cursor-pointer">管理后台</a>
+        </nav>
+    
+        <!-- Tech Stack -->
+        <nav>
+          <header class="footer-title text-base-content font-semibold">技术栈</header>
+          <a class="link link-hover cursor-pointer">Vue.js</a>
+          <a class="link link-hover cursor-pointer">React</a>
+          <a class="link link-hover cursor-pointer">TypeScript</a>
+          <a class="link link-hover cursor-pointer">Node.js</a>
+          <a class="link link-hover cursor-pointer">Python</a>
+        </nav>
+    
+        <!-- Contact -->
+        <nav>
+          <header class="footer-title text-base-content font-semibold">联系方式</header>
+          <a class="link link-hover cursor-pointer">Email: contact@example.com</a>
           <a href="https://beian.miit.gov.cn/" target="_blank" class="link link-hover cursor-pointer">备案信息</a>
           <a class="link link-hover cursor-pointer">隐私政策</a>
         </nav>
@@ -66,10 +66,8 @@
     <footer class="footer footer-center p-6 bg-base-300 text-base-content border-t border-base-200">
       <aside>
         <p class="text-sm">
-          © {{ currentYear }} TechBlog. 用 ❤️ 和 
-          <span class="text-primary font-semibold">Vue.js</span> 构建 | 
-          <span class="text-primary cursor-pointer hover:underline">ICP备案号</span> | 
-          <span class="text-primary cursor-pointer hover:underline">站点地图</span>
+          © {{ currentYear }} WangChuang. 用 ❤️ 和 
+          <span class="text-primary font-semibold">Vue.js</span> 构建
         </p>
         <div class="flex items-center gap-2 mt-2 text-xs text-base-content/60">
           <span class="iconify" data-icon="heroicons:heart" data-width="14"></span>
