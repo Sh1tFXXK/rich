@@ -250,6 +250,19 @@ const categories = [
 const projects = [
   {
     id: 1,
+    title: '2026 AI变现全景报告',
+    category: '前端开发',
+    categoryId: 'frontend',
+    year: '2026',
+    image: '/assets/images/ai2money.jpeg',
+    description: 'AI 变现趋势分析与商业模式研究报告，可视化展示 AI 行业变现路径',
+    fullDescription: '一个全面的 AI 变现全景报告项目，深入分析 2026 年 AI 行业的商业模式和变现路径。通过数据可视化和交互式界面，展示 AI 技术在各个领域的应用和盈利模式。项目采用现代前端技术栈，提供流畅的用户体验和直观的数据展示。',
+    techStack: ['HTML5', 'CSS3', 'JavaScript', 'Data Visualization', 'GitHub Pages'],
+    demoUrl: 'https://sh1tfxxk.github.io/ai2money/',
+    githubUrl: 'https://github.com/Sh1tFXXK/ai2money'
+  },
+  {
+    id: 2,
     title: '网络拓扑训练器',
     category: '前端开发',
     categoryId: 'frontend',
