@@ -1,49 +1,16 @@
 <template>
   <main class="flex-1 p-4 md:p-8 overflow-y-auto">
-    <div class="space-y-24">
+    <div class="space-y-12">
       <!-- Portfolio Hero Section -->
       <section id="PortfolioHeroSection" class="relative overflow-hidden rounded-box">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 opacity-50"></div>
-        <!-- SVG Wave Background -->
-        <svg class="absolute bottom-0 left-0 w-full h-24 opacity-30" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0,50 C360,100 720,0 1080,50 C1260,80 1380,70 1440,50 L1440,100 L0,100 Z" fill="url(#portfolioWaveGrad1)"/>
-          <path d="M0,70 C240,30 480,90 720,50 C960,10 1200,70 1440,30 L1440,100 L0,100 Z" fill="url(#portfolioWaveGrad2)" opacity="0.5"/>
-          <defs>
-            <linearGradient id="portfolioWaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:var(--color-primary);stop-opacity:0.8" />
-              <stop offset="50%" style="stop-color:var(--color-secondary);stop-opacity:0.6" />
-              <stop offset="100%" style="stop-color:var(--color-accent);stop-opacity:0.8" />
-            </linearGradient>
-            <linearGradient id="portfolioWaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:var(--color-accent);stop-opacity:0.5" />
-              <stop offset="100%" style="stop-color:var(--color-primary);stop-opacity:0.3" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <!-- SVG Decorative Elements -->
-        <svg class="absolute top-4 right-8 w-28 h-28 opacity-15" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="10" width="80" height="80" rx="10" stroke="url(#portfolioRectGrad)" stroke-width="2" fill="none"/>
-          <rect x="20" y="20" width="60" height="60" rx="8" stroke="url(#portfolioRectGrad)" stroke-width="1.5" fill="none" opacity="0.6"/>
-          <rect x="30" y="30" width="40" height="40" rx="5" fill="url(#portfolioRectGrad)" opacity="0.15"/>
-          <defs>
-            <linearGradient id="portfolioRectGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:var(--color-primary)" />
-              <stop offset="100%" style="stop-color:var(--color-secondary)" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <svg class="absolute top-8 left-8 w-20 h-20 opacity-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="50,10 90,90 10,90" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
-          <polygon points="50,30 75,75 25,75" stroke="var(--color-secondary)" stroke-width="1.5" fill="none" opacity="0.6"/>
-        </svg>
         <div class="tech-border-gradient">
-          <div class="p-8 md:p-16 bg-base-100 text-center">
-            <h1 class="text-5xl md:text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent italic tracking-wider mb-6"
-                style="font-family: 'Times New Roman', Georgia, serif; text-shadow: 0 0 40px rgba(99,102,241,0.6);">
+          <div class="p-6 md:p-8 bg-base-100 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-2">
               作品集
             </h1>
-            <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-              精选项目展示，涵盖前端开发、后端架构、移动应用等多个领域
+            <p class="text-base text-base-content/70 max-w-xl mx-auto">
+              精选项目展示
             </p>
           </div>
         </div>
@@ -51,14 +18,14 @@
 
       <!-- Portfolio Filter -->
       <section id="PortfolioFilter" class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
           <button 
             v-for="category in categories" 
             :key="category.id"
             @click="activeFilter = category.id"
-            :class="['btn', activeFilter === category.id ? 'btn-primary' : 'btn-outline']"
+            :class="['btn btn-sm', activeFilter === category.id ? 'btn-primary' : 'btn-outline']"
           >
-            <span class="iconify mr-2" :data-icon="category.icon" data-width="18"></span>
+            <span class="iconify mr-2" :data-icon="category.icon" data-width="16"></span>
             {{ category.name }}
           </button>
         </div>
@@ -119,23 +86,23 @@
 
       <!-- Skills Section -->
       <section id="SkillsSection" class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">技术栈</h2>
-          <p class="text-base-content/70">熟练掌握多种前沿技术</p>
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">技术栈</h2>
+          <p class="text-sm text-base-content/70">熟练掌握多种前沿技术</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <div 
             v-for="skill in skills" 
             :key="skill.name"
-            class="group p-6 bg-base-200/50 rounded-xl text-center hover:bg-base-200 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            class="group p-4 bg-base-200/50 rounded-xl text-center hover:bg-base-200 transition-all duration-300 hover:scale-105 hover:shadow-lg"
           >
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-              <span class="iconify text-white text-3xl" :data-icon="skill.icon" data-width="32"></span>
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+              <span class="iconify text-white text-2xl" :data-icon="skill.icon" data-width="24"></span>
             </div>
-            <h4 class="font-semibold text-base-content">{{ skill.name }}</h4>
-            <div class="mt-2 w-full bg-base-300 rounded-full h-2">
+            <h4 class="font-semibold text-sm text-base-content">{{ skill.name }}</h4>
+            <div class="mt-2 w-full bg-base-300 rounded-full h-1.5">
               <div 
-                class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all duration-1000"
+                class="bg-gradient-to-r from-primary to-secondary h-1.5 rounded-full transition-all duration-1000"
                 :style="{ width: skill.level + '%' }"
               ></div>
             </div>
@@ -145,9 +112,9 @@
 
       <!-- Experience Timeline -->
       <section id="ExperienceSection" class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">工作经历</h2>
-          <p class="text-base-content/70">职业生涯发展历程</p>
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">工作经历</h2>
+          <p class="text-sm text-base-content/70">职业生涯发展历程</p>
         </div>
         <div class="max-w-3xl mx-auto">
           <div class="relative">
@@ -179,16 +146,16 @@
       </section>
 
       <!-- Contact CTA -->
-      <section id="ContactCTA" class="container mx-auto px-4 pb-16">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-secondary to-accent p-12 text-center">
+      <section id="ContactCTA" class="container mx-auto px-4 pb-12">
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-secondary to-accent p-8 text-center">
           <div class="absolute inset-0 bg-black/10"></div>
           <div class="relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">有项目想法？</h2>
-            <p class="text-white/90 text-lg mb-8 max-w-xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">有项目想法？</h2>
+            <p class="text-white/90 text-base mb-6 max-w-xl mx-auto">
               无论是网站开发、应用设计还是技术咨询，我都很乐意与您合作
             </p>
-            <a href="mailto:contact@example.com" class="btn btn-lg bg-white text-primary hover:bg-white/90 border-0">
-              <span class="iconify mr-2" data-icon="heroicons:envelope" data-width="20"></span>
+            <a href="mailto:contact@example.com" class="btn btn-md bg-white text-primary hover:bg-white/90 border-0">
+              <span class="iconify mr-2" data-icon="heroicons:envelope" data-width="18"></span>
               联系我
             </a>
           </div>
@@ -250,6 +217,19 @@ const categories = [
 const projects = [
   {
     id: 1,
+    title: '图鉴博物馆',
+    category: '前端开发',
+    categoryId: 'frontend',
+    year: '2025',
+    image: '/assets/images/handbook.jpeg',
+    description: '精美的图鉴收藏展示平台，汇集各类技术图解和可视化教程',
+    fullDescription: '一个精心设计的图鉴博物馆，收集和展示各类技术图解、可视化教程和知识图谱。通过直观的图形化方式帮助用户理解复杂的技术概念。项目采用响应式设计，支持多种展示模式，提供优雅的浏览体验。',
+    techStack: ['HTML5', 'CSS3', 'JavaScript', 'React','Responsive Design', 'GitHub Pages'],
+    demoUrl: 'https://sh1tfxxk.github.io/Illustrated-Handbook-Museum/',
+    githubUrl: 'https://github.com/Sh1tFXXK/Illustrated-Handbook-Museum'
+  },
+  {
+    id: 2,
     title: '2026 AI变现全景报告',
     category: '前端开发',
     categoryId: 'frontend',
@@ -262,7 +242,7 @@ const projects = [
     githubUrl: 'https://github.com/Sh1tFXXK/ai2money'
   },
   {
-    id: 2,
+    id: 3,
     title: '网络拓扑训练器',
     category: '前端开发',
     categoryId: 'frontend',
@@ -275,7 +255,7 @@ const projects = [
     githubUrl: 'https://github.com/Sh1tFXXK/network-topology-trainer'
   },
   {
-    id: 2,
+    id: 4,
     title: '电商平台前端重构',
     category: '前端开发',
     categoryId: 'frontend',
@@ -288,7 +268,7 @@ const projects = [
     githubUrl: 'https://github.com'
   },
   {
-    id: 3,
+    id: 5,
     title: '微服务API网关',
     category: '后端架构',
     categoryId: 'backend',
@@ -301,7 +281,7 @@ const projects = [
     githubUrl: 'https://github.com'
   },
   {
-    id: 4,
+    id: 6,
     title: '跨平台移动应用',
     category: '移动应用',
     categoryId: 'mobile',
@@ -314,7 +294,7 @@ const projects = [
     githubUrl: null
   },
   {
-    id: 5,
+    id: 7,
     title: '企业级管理系统',
     category: '全栈项目',
     categoryId: 'fullstack',
@@ -327,7 +307,7 @@ const projects = [
     githubUrl: null
   },
   {
-    id: 6,
+    id: 8,
     title: '数据可视化大屏',
     category: '前端开发',
     categoryId: 'frontend',
@@ -340,7 +320,7 @@ const projects = [
     githubUrl: 'https://github.com'
   },
   {
-    id: 7,
+    id: 9,
     title: 'AI 智能客服系统',
     category: '全栈项目',
     categoryId: 'fullstack',
