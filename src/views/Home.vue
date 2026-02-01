@@ -16,10 +16,10 @@
         playsinline
         class="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/assets/video/moutainFreevideoonPixabay.mp4" type="video/mp4" />
+        <source :src="mountainVideo" type="video/mp4" />
         <!-- Fallback image if video fails to load -->
         <img
-          src="/assets/images/hero-bg.jpg"
+          :src="heroBgImage"
           alt="Background"
           class="absolute inset-0 w-full h-full object-cover"
         />
@@ -123,7 +123,7 @@
                   <img
                     alt="Vue.js 3 Composition API深度解析"
                     class="w-full h-48 object-cover rounded-lg"
-                    src="/assets/images/carousel-1.jpg"
+                    :src="carousel1Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -158,7 +158,7 @@
                   <img
                     alt="Node.js性能优化实战指南"
                     class="w-full h-48 object-cover rounded-lg"
-                    src="/assets/images/carousel-1.jpg"
+                    :src="carousel1Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -192,7 +192,7 @@
                   <img
                     alt="React Hooks最佳实践"
                     class="w-full h-48 object-cover rounded-lg"
-                    src="/assets/images/carousel-1.jpg"
+                    :src="carousel1Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -227,7 +227,7 @@
                   <img
                     alt="TypeScript高级类型系统"
                     class="w-full h-48 object-cover rounded-lg"
-                    src="/assets/images/carousel-1.jpg"
+                    :src="carousel1Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -290,7 +290,7 @@
                     <img
                       alt="JavaScript异步编程"
                       class="w-12 h-12 rounded object-cover"
-                      src="/assets/images/preview.jpg"
+                      :src="previewImage"
                     />
                     <div class="flex-1">
                       <h4 class="text-sm font-medium text-base-content line-clamp-2">
@@ -306,7 +306,7 @@
                     <img
                       alt="CSS Grid布局"
                       class="w-12 h-12 rounded object-cover"
-                      src="/assets/images/preview.jpg"
+                      :src="previewImage"
                     />
                     <div class="flex-1">
                       <h4 class="text-sm font-medium text-base-content line-clamp-2">
@@ -322,7 +322,7 @@
                     <img
                       alt="RESTful API设计"
                       class="w-12 h-12 rounded object-cover"
-                      src="/assets/images/preview.jpg"
+                      :src="previewImage"
                     />
                     <div class="flex-1">
                       <h4 class="text-sm font-medium text-base-content line-clamp-2">
@@ -432,7 +432,7 @@
           <!-- Portfolio Item 1 -->
           <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
             <div class="relative h-48 overflow-hidden">
-              <img src="/assets/images/carousel-1.jpg" alt="电商平台" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img :src="carousel1Image" alt="电商平台" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
               <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span class="text-white text-lg font-semibold flex items-center gap-2">
@@ -450,7 +450,7 @@
           <!-- Portfolio Item 2 -->
           <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
             <div class="relative h-48 overflow-hidden">
-              <img src="/assets/images/carousel-2.jpg" alt="API网关" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img :src="carousel2Image" alt="API网关" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
               <div class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span class="text-white text-lg font-semibold flex items-center gap-2">
@@ -468,7 +468,7 @@
           <!-- Portfolio Item 3 -->
           <article class="group relative overflow-hidden rounded-2xl bg-base-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer" onclick="navigateTo('portfolio')">
             <div class="relative h-48 overflow-hidden">
-              <img src="/assets/images/carousel-3.jpg" alt="移动应用" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img :src="carousel3Image" alt="移动应用" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-base-100 via-transparent to-transparent opacity-60"></div>
               <div class="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span class="text-white text-lg font-semibold flex items-center gap-2">
@@ -508,7 +508,7 @@
                   <img
                     alt="现代JavaScript框架对比"
                     class="w-full h-40 object-cover rounded-lg"
-                    src="/assets/images/carousel-2.jpg"
+                    :src="carousel2Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -539,7 +539,7 @@
                   <img
                     alt="Web性能优化终极指南"
                     class="w-full h-40 object-cover rounded-lg"
-                    src="/assets/images/carousel-2.jpg"
+                    :src="carousel2Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -570,7 +570,7 @@
                   <img
                     alt="微服务架构实战"
                     class="w-full h-40 object-cover rounded-lg"
-                    src="/assets/images/carousel-2.jpg"
+                    :src="carousel2Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -601,7 +601,7 @@
                   <img
                     alt="AI开发工具集"
                     class="w-full h-40 object-cover rounded-lg"
-                    src="/assets/images/carousel-2.jpg"
+                    :src="carousel2Image"
                   />
                 </figure>
                 <div class="space-y-3">
@@ -759,6 +759,16 @@
     </section>
   </main>
 </template>
+
+<script setup>
+// Import images using Vite's asset handling
+import heroBgImage from '/assets/images/hero-bg.jpg'
+import carousel1Image from '/assets/images/carousel-1.jpg'
+import carousel2Image from '/assets/images/carousel-2.jpg'
+import carousel3Image from '/assets/images/carousel-3.jpg'
+import previewImage from '/assets/images/preview.jpg'
+import mountainVideo from '/assets/video/moutainFreevideoonPixabay.mp4'
+</script>
 
 <style scoped>
 /*

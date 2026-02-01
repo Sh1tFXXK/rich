@@ -12,9 +12,9 @@
         crossorigin="anonymous"
         class="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4" type="video/mp4" />
+        <source :src="previewVideo" type="video/mp4" />
         <img
-          src="/assets/images/hero-bg.jpg"
+          :src="heroBgImage"
           alt="Background"
           class="absolute inset-0 w-full h-full object-cover"
         />
@@ -68,7 +68,7 @@
               <img
                 alt="文章封面"
                 class="aspect-video object-cover"
-                src="/assets/images/hero-bg.jpg"
+                :src="heroBgImage"
               />
             </figure>
             <div class="card-body p-6">
@@ -119,6 +119,10 @@
 
 <script setup>
 import { onMounted } from 'vue'
+
+// Import images using Vite's asset handling
+import heroBgImage from '/assets/images/hero-bg.jpg'
+import previewVideo from '/assets/video/97ba6b60662ab4f31ef06cdf5a5f8e94_preview.mp4'
 
 onMounted(() => {
   const filterBar = document.getElementById('ArticleFilterAndSortSection')

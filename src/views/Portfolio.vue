@@ -203,6 +203,15 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+// Import images using Vite's asset handling
+import handbookImage from '/assets/images/handbook.jpeg'
+import ai2moneyImage from '/assets/images/ai2money.jpeg'
+import carousel1Image from '/assets/images/carousel-1.jpg'
+import carousel2Image from '/assets/images/carousel-2.jpg'
+import carousel3Image from '/assets/images/carousel-3.jpg'
+import heroBgImage from '/assets/images/hero-bg.jpg'
+import previewImage from '/assets/images/preview.jpg'
+
 const activeFilter = ref('all')
 const selectedProject = ref(null)
 
@@ -221,7 +230,7 @@ const projects = [
     category: '前端开发',
     categoryId: 'frontend',
     year: '2025',
-    image: '/assets/images/handbook.jpeg',
+    image: handbookImage,
     description: '精美的图鉴收藏展示平台，汇集各类技术图解和可视化教程',
     fullDescription: '一个精心设计的图鉴博物馆，收集和展示各类技术图解、可视化教程和知识图谱。通过直观的图形化方式帮助用户理解复杂的技术概念。项目采用响应式设计，支持多种展示模式，提供优雅的浏览体验。',
     techStack: ['HTML5', 'CSS3', 'JavaScript', 'React','Responsive Design', 'GitHub Pages'],
@@ -234,7 +243,7 @@ const projects = [
     category: '前端开发',
     categoryId: 'frontend',
     year: '2026',
-    image: '/assets/images/ai2money.jpeg',
+    image: ai2moneyImage,
     description: 'AI 变现趋势分析与商业模式研究报告，可视化展示 AI 行业变现路径',
     fullDescription: '一个全面的 AI 变现全景报告项目，深入分析 2026 年 AI 行业的商业模式和变现路径。通过数据可视化和交互式界面，展示 AI 技术在各个领域的应用和盈利模式。项目采用现代前端技术栈，提供流畅的用户体验和直观的数据展示。',
     techStack: ['HTML5', 'CSS3', 'JavaScript', 'Data Visualization', 'GitHub Pages'],
@@ -247,7 +256,7 @@ const projects = [
     category: '前端开发',
     categoryId: 'frontend',
     year: '2025',
-    image: '/assets/images/network-topology-trainer.gif',
+    image: previewImage,
     description: '交互式网络拓扑学习工具，帮助学习和理解计算机网络拓扑结构',
     fullDescription: '一个交互式的网络拓扑训练器，专为学习计算机网络设计。用户可以通过可视化界面学习和练习各种网络拓扑结构，包括星型、环型、总线型、网状等。项目采用现代前端技术栈，提供流畅的交互体验和直观的学习界面。',
     techStack: ['HTML5', 'CSS3', 'JavaScript', 'Canvas API', 'GitHub Pages'],
@@ -260,7 +269,7 @@ const projects = [
     category: '前端开发',
     categoryId: 'frontend',
     year: '2024',
-    image: '/assets/images/carousel-1.jpg',
+    image: carousel1Image,
     description: '使用 Vue 3 + TypeScript 重构大型电商平台前端，提升性能 40%',
     fullDescription: '这是一个大型电商平台的前端重构项目。我负责将原有的 jQuery 项目迁移到 Vue 3 生态系统，采用 Composition API 和 TypeScript 提升代码质量。通过代码分割、懒加载和缓存优化，首屏加载时间减少了 40%，用户转化率提升了 15%。',
     techStack: ['Vue 3', 'TypeScript', 'Pinia', 'Vite', 'Tailwind CSS'],
@@ -273,7 +282,7 @@ const projects = [
     category: '后端架构',
     categoryId: 'backend',
     year: '2024',
-    image: '/assets/images/carousel-2.jpg',
+    image: carousel2Image,
     description: '基于 Node.js 的高性能 API 网关，支持百万级并发',
     fullDescription: '设计并实现了一个企业级 API 网关，支持服务发现、负载均衡、熔断降级、限流等功能。使用 Redis 集群实现分布式限流，采用 JWT 实现统一认证授权。经过压测，单节点可支持 10万+ QPS，整体系统可支持百万级并发。',
     techStack: ['Node.js', 'Express', 'Redis', 'Docker', 'Kubernetes'],
@@ -286,7 +295,7 @@ const projects = [
     category: '移动应用',
     categoryId: 'mobile',
     year: '2023',
-    image: '/assets/images/carousel-3.jpg',
+    image: carousel3Image,
     description: '使用 React Native 开发的社交应用，iOS 和 Android 双端',
     fullDescription: '一款面向年轻人的社交应用，支持即时通讯、动态发布、位置分享等功能。采用 React Native 实现跨平台开发，一套代码同时支持 iOS 和 Android。集成了推送通知、地图定位、相机拍照等原生功能，用户体验流畅。',
     techStack: ['React Native', 'Redux', 'Firebase', 'Socket.io'],
@@ -299,7 +308,7 @@ const projects = [
     category: '全栈项目',
     categoryId: 'fullstack',
     year: '2023',
-    image: '/assets/images/hero-bg.jpg',
+    image: heroBgImage,
     description: '为制造企业定制的 ERP 系统，涵盖生产、库存、财务模块',
     fullDescription: '一个完整的企业资源规划系统，包含生产计划、库存管理、采购销售、财务核算等核心模块。前端使用 Vue 3 + Element Plus，后端使用 Spring Boot + MySQL，采用微服务架构，支持多租户部署。',
     techStack: ['Vue 3', 'Spring Boot', 'MySQL', 'Redis', 'RabbitMQ'],
@@ -312,7 +321,7 @@ const projects = [
     category: '前端开发',
     categoryId: 'frontend',
     year: '2024',
-    image: '/assets/images/preview.jpg',
+    image: previewImage,
     description: '实时数据监控大屏，支持多种图表类型和动态数据更新',
     fullDescription: '为智慧城市项目开发的数据可视化大屏，展示交通、环境、能源等多维度数据。使用 ECharts 和 D3.js 实现丰富的图表效果，通过 WebSocket 实现实时数据推送。支持响应式布局，适配各种屏幕尺寸。',
     techStack: ['Vue 3', 'ECharts', 'D3.js', 'WebSocket', 'Sass'],
@@ -325,7 +334,7 @@ const projects = [
     category: '全栈项目',
     categoryId: 'fullstack',
     year: '2024',
-    image: '/assets/images/carousel-1.jpg',
+    image: carousel1Image,
     description: '基于大语言模型的智能客服系统，支持多轮对话',
     fullDescription: '集成 GPT-4 的智能客服系统，支持自然语言理解、多轮对话、知识库检索等功能。前端使用 React，后端使用 Python FastAPI，通过 RAG 技术结合企业知识库，回答准确率达到 90% 以上。',
     techStack: ['React', 'Python', 'FastAPI', 'PostgreSQL', 'OpenAI API'],

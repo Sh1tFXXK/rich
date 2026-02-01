@@ -40,10 +40,10 @@
         </svg>
         <div class="tech-border-gradient">
           <div class="p-8 md:p-12 bg-base-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div class="avatar group relative">
-              <div class="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img alt="作者头像" src="/assets/images/preview.jpg" class="w-full h-full object-cover rounded-full">
-              </div>
+              <div class="avatar group relative">
+                <div class="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <img alt="作者头像" :src="previewImage" class="w-full h-full object-cover rounded-full">
+                </div>
               <div class="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 smooth-transition">
                 <p class="text-white text-sm text-center">
                   保持好奇，<br>不断探索。
@@ -254,7 +254,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
             <figure>
-              <img alt="电商平台重构" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-1.jpg">
+              <img alt="电商平台重构" class="smooth-transition group-hover:scale-105" :src="carousel1Image">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -281,7 +281,7 @@
           </div>
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
             <figure>
-              <img alt="微服务网关" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-2.jpg">
+              <img alt="微服务网关" class="smooth-transition group-hover:scale-105" :src="carousel2Image">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -308,7 +308,7 @@
           </div>
           <div data-repeatable="true" class="card bg-base-200 shadow-lg image-full group cursor-pointer">
             <figure>
-              <img alt="移动社交应用" class="smooth-transition group-hover:scale-105" src="/assets/images/carousel-3.jpg">
+              <img alt="移动社交应用" class="smooth-transition group-hover:scale-105" :src="carousel3Image">
             </figure>
             <div class="card-body justify-between">
               <div>
@@ -423,7 +423,7 @@
             <div class="flex items-center gap-4 mt-4">
               <div class="avatar">
                 <div class="w-12 rounded-full">
-                  <img alt="推荐人头像" src="/assets/images/preview.jpg">
+                  <img alt="推荐人头像" :src="previewImage">
                 </div>
               </div>
               <div>
@@ -439,7 +439,7 @@
             <div class="flex items-center gap-4 mt-4">
               <div class="avatar">
                 <div class="w-12 rounded-full">
-                  <img alt="推荐人头像" src="/assets/images/preview.jpg">
+                  <img alt="推荐人头像" :src="previewImage">
                 </div>
               </div>
               <div>
@@ -477,6 +477,12 @@
 
 <script setup>
 import { onMounted } from 'vue';
+
+// Import images using Vite's asset handling
+import previewImage from '/assets/images/preview.jpg'
+import carousel1Image from '/assets/images/carousel-1.jpg'
+import carousel2Image from '/assets/images/carousel-2.jpg'
+import carousel3Image from '/assets/images/carousel-3.jpg'
 
 onMounted(() => {
   // =========================================================
